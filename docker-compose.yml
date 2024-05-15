@@ -1,0 +1,11 @@
+services:
+  course_api:
+    build:
+      context: ./task_api
+      dockerfile: Dockerfile
+    #image: nodejs
+    container_name: task_api
+    restart: unless-stopped
+    ports:
+      - "80:8080"
+  
